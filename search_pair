@@ -1,0 +1,35 @@
+def difference(matrix):
+    for i in range(len(matrix)):
+        minimum = min(matrix[i])
+        for j in range(len(matrix[i])):
+            matrix[i][j] -= minimum
+
+def print_result(matrix):
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if matrix[i][j] == 0:
+                print(i+1, "-", j+1)
+                break
+
+
+matrix_1 = [[5,  1, 6],
+            [2,  7, 12],
+            [14, 9, 3]]
+
+matrix_2 = [[5, 2,  3],
+            [6, 15, 2],
+            [7, 15, 5]]
+
+for element in matrix_1:
+    print(element)
+
+print()
+
+difference(matrix_1)
+
+for element in matrix_1:
+    print(element)
+
+print()
+
+print_result(matrix_1)
