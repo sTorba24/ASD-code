@@ -1,0 +1,20 @@
+import math
+list_of_points = [[3,5],[1,7],[6,8],[3,5],[11,32]]
+
+
+print("Набір точок",list_of_points)
+
+dmin = 100000
+
+for i in range(len(list_of_points)-1):
+
+    for j in range(i+1,len(list_of_points)):
+
+        d = math.sqrt((list_of_points[j][0]-list_of_points[i][0])**2 + (list_of_points[j][1]-list_of_points[i][1])**2)
+
+        if d < dmin:
+            dmin = d
+            index1 = i
+            index2 = j
+
+print("Найменша відстань між точкою",index1,"i",index2)
